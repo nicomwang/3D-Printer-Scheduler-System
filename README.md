@@ -38,7 +38,7 @@ define('DBNAME','Your_database_name');
 define('DBPASS','your_database_password');
 ```
 3.	To run on local devices or on server: save extracted files into htdocs and run user_index.html (You will be auto directed to this page if you run other php files)
-4.	Default admin username and password: test@wit.edu/test3. 
+4.	Default admin username and password: test@wit.edu/test 
 
 ##  🚀 Future Work
 Create an API for connecting to the slicer software directly.
