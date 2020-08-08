@@ -5,6 +5,8 @@ Created a new web application to schedule 3D printing events, add/update printer
 
 Pervious web application: [Website](https://sandbox-ui.firebaseapp.com/) and [Github Link](https://github.com/wittechsandbox/printer-queue)
 
+![scheduler](https://github.com/wittechsandbox/3D-Printer-Scheduler-System/blob/master/img/demo.gif)
+
 ## 🎨 Features
 * Separate public and administrative interfaces
 * A responsive, intuitive, and user-friendly front-end designed with Bootstrap 4
@@ -37,8 +39,13 @@ define('DBNAME','Your_database_name');
 ```sh
 define('DBPASS','your_database_password');
 ```
-3.	To run on local devices or on server: save extracted files into htdocs and run user_index.html (You will be auto directed to this page if you run other php files)
-4.	Default admin username and password: test@wit.edu/test 
+3.	To run on local devices or on server: save extracted files into htdocs and run user_index.html  
+   (You will be auto directed to this page if you run other php files)
+4.	Default admin username and password: test@wit.edu/test  
+   NOTE: if you are unable to login, run the following query in your MySQL database to change the password
+```sh
+UPDATE account SET password=AES_ENCRYPT('test', UNHEX(SHA2('TechnologySandbox',512))) WHERE accountId= '1'
+```
 
 ##  🚀 Future Work
 Create an API for connecting to the slicer software directly.
